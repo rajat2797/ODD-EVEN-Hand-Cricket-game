@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1459785125 source:d:\codes\game odd_even\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<process.h>
+	<string.h>
+
