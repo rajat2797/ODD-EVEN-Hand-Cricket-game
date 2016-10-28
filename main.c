@@ -12,13 +12,13 @@ struct user
 
 }p1,p2;
 
-
+// First we go for the toss. This function basically does the toss as to who would bat or ball first depending on who won the toss.
 int toss()
 {
     srand ( time(NULL) );
     char c;
     int m,ts,k,b,ct;
-    printf("\nChoose ----- ODD OR EVEN (O/E) :  ");
+    printf("\nChoose ----- ODD OR EVEN (O/E) : ");
     scanf("%s",&c);
     printf("\nPlay your move  : ");
     scanf("%d",&m);
@@ -30,14 +30,16 @@ int toss()
     {
         if(k%2==0)
             {
-                printf("\n\nYOU WON THE TOSS\n\n");
+                printf("\n\nYOU WON THE TOSS!!\n\n");
                 getch();
-                printf("WHAT WOULD YOU LIKE TO CHOOSE ---- BAT (1) or BOWL (2)  : ");
+                printf("CHOOSE ---- BAT (1) or BOWL (2)  : ");
                 scanf("%d",&b);
                 if(b==1)
-                    return 1;
+                {printf("%s","you choose to bat first /n");
+                    return 1;}
                 else
-                    return 2;
+                    {printf("%s","you choose to ball first /n");
+                    return 2;}
             }
         else
             {
@@ -67,9 +69,11 @@ int toss()
                 printf("WHAT WOULD YOU LIKE TO CHOOSE ---- BAT (1) or BOWL (2)  : ");
                 scanf("%d",&b);
                 if(b==1)
-                    return 1;
+                    {printf("%s","you choose to bat first /n");
+                    return 1;}
                 else
-                    return 2;
+                    {printf("%s","you choose to ball first /n");
+                    return 2;}
                 return 1;
             }
         else
@@ -93,6 +97,7 @@ int toss()
     }
 }
 
+//This is the main menu that welcomes a new player
 int menu()
 {
     int c,series;
@@ -110,6 +115,8 @@ int menu()
                  exit(0);
     }
 }
+
+
 void pwc()
 {
 
@@ -252,6 +259,7 @@ void pwc()
     }while(ch=='y'||ch=='Y');
 }
 
+//This is the main function
 int main()
 {
     int men;
